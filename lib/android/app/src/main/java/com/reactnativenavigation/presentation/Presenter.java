@@ -21,6 +21,7 @@ import com.reactnativenavigation.viewcontrollers.ParentController;
 import com.reactnativenavigation.viewcontrollers.ViewController;
 import com.reactnativenavigation.viewcontrollers.navigator.Navigator;
 
+import android.view.WindowManager;
 import static android.view.WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS;
 
 @SuppressWarnings("FieldCanBeLocal")
@@ -193,6 +194,7 @@ public class Presenter {
 
     private void applyNavigationBarOptions(NavigationBarOptions options) {
         setNavigationBarBackgroundColor(options);
+        activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
     }
 
     private void mergeNavigationBarOptions(NavigationBarOptions options) {

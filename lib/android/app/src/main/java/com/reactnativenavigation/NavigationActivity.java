@@ -26,7 +26,7 @@ import com.reactnativenavigation.presentation.RootPresenter;
 public class NavigationActivity extends AppCompatActivity implements DefaultHardwareBackBtnHandler, PermissionAwareActivity, JsDevReloadHandler.ReloadListener {
     @Nullable
     private PermissionListener mPermissionListener;
-    
+
     protected Navigator navigator;
 
     @Override
@@ -41,6 +41,13 @@ public class NavigationActivity extends AppCompatActivity implements DefaultHard
         );
         navigator.bindViews();
         getReactGateway().onActivityCreated(this);
+        getWindow().getDecorView().setSystemUiVisibility(
+            View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+            | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+            | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+            | View.SYSTEM_UI_FLAG_FULLSCREEN
+            | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
     }
 
     @Override

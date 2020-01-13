@@ -15,9 +15,12 @@ public class ComponentPresenterBase {
 
     public void applyBottomInset(@NonNull View view, int bottomInset) {
         MarginLayoutParams lp = (MarginLayoutParams) view.getLayoutParams();
-        if (lp != null && lp.bottomMargin!= bottomInset) {
-            lp.bottomMargin = bottomInset;
+        // if (lp != null && lp.bottomMargin!= bottomInset) {
+            // lp.bottomMargin = bottomInset;
+        if (lp != null) {
+            lp.bottomMargin = 0;
             view.requestLayout();
         }
+        // }
     }
 }

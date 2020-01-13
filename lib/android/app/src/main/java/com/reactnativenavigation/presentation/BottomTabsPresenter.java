@@ -150,11 +150,13 @@ public class BottomTabsPresenter {
 
     public void applyBottomInset(int bottomInset) {
         ViewGroup.MarginLayoutParams lp = (ViewGroup.MarginLayoutParams) bottomTabs.getLayoutParams();
-        lp.bottomMargin = bottomInset;
+        // lp.bottomMargin = bottomInset;
+        lp.bottomMargin = 0;
         bottomTabs.requestLayout();
     }
 
     public int getBottomInset(Options resolvedOptions) {
-        return resolvedOptions.withDefaultOptions(defaultOptions).bottomTabsOptions.isHiddenOrDrawBehind() ? 0 : bottomTabs.getHeight();
+        return 0;
+        // return resolvedOptions.withDefaultOptions(defaultOptions).bottomTabsOptions.isHiddenOrDrawBehind() ? 0 : bottomTabs.getHeight();
     }
 }

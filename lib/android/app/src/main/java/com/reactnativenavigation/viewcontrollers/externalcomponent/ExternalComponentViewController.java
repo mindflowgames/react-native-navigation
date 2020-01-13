@@ -84,7 +84,8 @@ public class ExternalComponentViewController extends ViewController<ExternalComp
 
     @Override
     public void applyBottomInset() {
-        if (view != null) presenter.applyBottomInset(view, getBottomInset());
+        // if (view != null) presenter.applyBottomInset(view, getBottomInset());
+        if (view != null) presenter.applyBottomInset(view, 0);
     }
 
     public FragmentActivity getActivity() {

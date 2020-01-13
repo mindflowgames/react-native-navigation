@@ -140,7 +140,7 @@ public abstract class ViewController<T extends ViewGroup> implements ViewTreeObs
     }
 
     public void setDefaultOptions(Options defaultOptions) {
-        
+
     }
 
     public Activity getActivity() {
@@ -354,6 +354,7 @@ public abstract class ViewController<T extends ViewGroup> implements ViewTreeObs
     }
 
     public int getBottomInset() {
-        return perform(parentController, 0, p -> p.getBottomInset(this));
+        return 0;
+        // return perform(parentController, 0, p -> p.getBottomInset(this));
     }
 }

@@ -108,7 +108,8 @@ public class ComponentViewController extends ChildController<ComponentLayout> {
 
     @Override
     public void applyBottomInset() {
-        if (view != null) presenter.applyBottomInset(view, getBottomInset());
+        // if (view != null) presenter.applyBottomInset(view, getBottomInset());
+        if (view != null) presenter.applyBottomInset(view, 0);
     }
 
     @Override
@@ -117,7 +118,8 @@ public class ComponentViewController extends ChildController<ComponentLayout> {
                 insets.getSystemWindowInsetLeft(),
                 insets.getSystemWindowInsetTop(),
                 insets.getSystemWindowInsetRight(),
-                Math.max(insets.getSystemWindowInsetBottom() - getBottomInset(), 0)
+                // Math.max(insets.getSystemWindowInsetBottom() - getBottomInset(), 0)
+                0
         ));
         return insets;
     }

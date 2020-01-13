@@ -100,7 +100,8 @@ public abstract class ChildController<T extends ViewGroup> extends ViewControlle
                 insets.getSystemWindowInsetLeft(),
                 0,
                 insets.getSystemWindowInsetRight(),
-                insets.getSystemWindowInsetBottom()
+                0
+                // insets.getSystemWindowInsetBottom()
         );
     }
 }

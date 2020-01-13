@@ -169,6 +169,7 @@ public abstract class ParentController<T extends ViewGroup> extends ChildControl
     }
 
     public int getBottomInset(ViewController child) {
-        return perform(getParentController(), 0, p -> p.getBottomInset(child));
+        return 0;
+        // return perform(getParentController(), 0, p -> p.getBottomInset(child));
     }
 }
